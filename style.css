@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Teko:wght@300&display=swap');
+
+* { 
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Teko', sans-serif;
+    
+    
+}
+.top-header{
+    width: 80%;
+    margin: 0 auto;    
+    
+}
+
+header {
+    background-color:rgb(232, 238, 229);
+    font-size: 36px;
+    background-color: rgb(7, 7, 83);
+}
+header ::after {
+    content: '';
+    display: table;
+    clear: both;    
+}
+
+.logo {
+    float:left;
+    width: 100px;
+    
+}
+
+nav {
+    float: right;
+    margin-right: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none ;
+    
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: 25px;
+    transition: color .1s ease-in-out;
+}
+a:link {
+    color:white;    
+}
+a:visited {
+    color:white;    
+}
+a:hover {
+    color:rgb(194, 189, 189);    
+}
+
+.intro {    
+    display: block; 
+    justify-content: center;
+    text-align: center;
+    font-size:1.8rem;      
+}
+
+.pc-image { 
+    width: 240px;
+    height: 200px;
+}
+
+.about-me {
+    background-color: rgb(13, 13, 73);
+    color: white;
+    padding: 40px 40px;
+    font-size: 1.6rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    height: 350px;
+}
