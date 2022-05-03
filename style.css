@@ -15,6 +15,8 @@ html,body{
     font-family: 'Rubik', sans-serif; 
 }
 
+
+
 header .navigation {
     display: flex;
     justify-content: space-between;
@@ -50,7 +52,7 @@ header .navigation .menu-list li a {
     text-decoration: none;    
 }
 
-header .navigation .menu-list li  :hover{
+header .navigation .menu-list li :hover{
     color:#135a9d;
     padding: 8%;
     font-weight: 600;
@@ -74,12 +76,12 @@ header .navigation .hamburger .bar{
     align-items: center;
     margin: 10% 0;
     justify-content: center;
-    
+    flex-wrap: wrap;
          
 }
 
 .coding img{
-    width: 270px;
+    width: 15rem;
     margin-right: 1rem;
 }
 
@@ -157,8 +159,8 @@ figure {
          
 }
 
-figure .preview{
-    width: 300px;
+figure .preview{    
+    width: 18rem;    /*burasi normalde 300px di*/
     border-radius: 10px;
 }
 
@@ -171,11 +173,12 @@ figcaption{
     z-index: 2;        
     top: 10%;
     left: 2%;
-    /* display: none;  */            
+    /* display: none;              */
     opacity: 0;    
     transition-delay: 0.1s; 
     margin-bottom: 10px;
-    text-align: center !important;    
+    text-align: center !important;
+    padding-top: 20px;    
 }
 figcaption h3 {
     line-height: 1.2rem;
@@ -183,20 +186,23 @@ figcaption h3 {
 
 figcaption a {
     display:flex;
+    align-items: center;
+    justify-content: center;
     border: 1.5px white solid ;
-    color:white;
-    background-color: ;
+    color:white;    
     border-radius: 20px;
     padding: 3px 10px;
     font-size: 1rem;
     font-weight: 500;
-    margin-top: 20px; 
-    text-decoration: none;      
+    margin: 10% 5%;
+    text-decoration: none;
+       
 }
 
 .project:before,
 .project:after {
     background-color: #07345f;
+    color: white;
     border-radius: 15px;    
     position: absolute;
     top: 0;
@@ -207,7 +213,8 @@ figcaption a {
     transition: all 1s ease;    
     z-index: 1;
     opacity: 0;
-    /* transform: scaleX(0.7); */    
+    
+    /* transform: scaleX(0.7);     */
 }
 
 .project:hover:before,
@@ -287,4 +294,103 @@ footer{
 }
 
 
+/* Tablet desktop :768px. */
 
+@media only screen and (min-width: 768px) and (max-width: 1132px) {
+    header .navigation .menu-list {
+      width: 40%;
+    }
+
+    h1{
+        text-align: center;
+    }
+  
+    header .navigation .menu-list li a{
+      font-size: 1rem;
+    }
+    .landing{
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 1%;
+        text-align: center;
+                
+    }   
+
+    figure .preview{    
+        /* min-width: 20rem; */
+        width: 25rem;    /*burasi normalde 300px di*/
+        border-radius: 10px;
+    } 
+}
+
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+
+    header .navigation .menu-list {
+      position: absolute;
+      top: 15vh;
+      min-width: 100%;
+      background: #135a9d;
+      text-align: center;
+      display: none;
+      color: white;
+      
+    }
+  
+    header .navigation .menu-list li {
+      display: block;
+    }
+  
+    header .navigation .menu-list li a {
+      display: block;
+      padding: 20px;
+      transition: color 1s ease, padding 1s ease, background-color 1s ease;
+      color: lightgray;
+  
+    }
+  
+    header .navigation .menu-list li a:hover{
+      color: white;
+      padding-left: 30px;
+      background: #07345f;
+    }  
+  
+    header .navigation .hamburger{
+      display: block;
+    }
+  
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    
+    h3 {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 1%;
+        text-align: center;
+                
+    }
+    .intro h3{
+        width: 120%;        
+        margin: 4%;
+    }
+
+    figure .preview{    
+        width: 28rem;    /*burasi normalde 300px di*/
+        border-radius: 10px;
+    }    
+  
+}
