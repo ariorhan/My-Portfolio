@@ -2,35 +2,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
 
-*{
-    margin: 0;
+*{  margin: 0;
     padding: 0;    
-    box-sizing: border-box;      
+    box-sizing: border-box; 
+         
 }
 
-html,body{
+body{
     /* min-width: 100%; */
     overflow-x: hidden;
     font-size: 16px;
-    font-family: 'Rubik', sans-serif; 
+    font-family: 'Rubik', sans-serif;
+    width: 100%; 
+
 }
 
+header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
 
+}
 
 header .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    min-height: 12vh;
-    min-width: 100%;
+    position: relative;    
+    /* min-width: 100%; */
     z-index: 10;    
-    border-bottom: 2px solid #1669ad;
+    border-bottom: 0.5px solid #1669ad;
+    width: 100%;
+    max-width: 1200px;
 }
   
 .logo {
-    width: 50%;
-    margin-left: 20px;    
+    width: 50%;     
+    margin-left: 10px;   
 }
 
 header .navigation .menu-list {
@@ -39,7 +47,7 @@ header .navigation .menu-list {
     justify-content: space-between;
     align-items:flex-end;
     width: 25%;
-    margin: auto 20px auto 0;
+    
     
 }
 
@@ -73,71 +81,80 @@ header .navigation .hamburger .bar{
 .landing {
     display: flex;
     align-items: center;
-    margin:1%;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url(/bg-last.jpg);
-    height: 400px;
+    background-image: url(/images/bg-last.jpg);
+    height:80vh;
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:1200px 600px;
     background-position:center;
     background-position-y: 1%;
-         
+    
 }
 
 .coding img{
     width: 15rem;
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1{
     color: #135a9d;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
     
 }
 h2{
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: 400;
     margin-bottom: 1%;
 }
 
 h3{
     padding: 0 0.2rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 1.5rem;
 }
 
-h2 .uline {
+h3 .uline {
     text-decoration: underline;
     text-decoration-color: #135a9d;
+    
 }
 
+p {
+    font-size: 1.5rem;
+}
 
 .about-me {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #135a9d;
-    margin: 3% 0;
+    flex-wrap: wrap;
+    background-color: #135a9d;   
+    margin: auto; 
+    max-width: 1200px;
     padding: 2% 0;
     opacity:0.8;
     border-radius: 10px;
+    /* height: 400px; */
 }
 .intro {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 60%;
     color: whitesmoke;
+    width: 100%;
+    
 }
 
 
 .work{
     display: flex;
     flex-direction: column;
+    margin-top: 3%;
 }
 .work-container{
     display: flex;
@@ -153,7 +170,7 @@ h2 .uline {
     /* align-items: center; */
     flex-wrap: wrap;
     margin: 3% 10%;
-   
+    
 }
 
 figure {
@@ -165,7 +182,7 @@ figure {
 }
 
 figure .preview{    
-    width: 18rem;    /*burasi normalde 300px di*/
+    width: 22rem;    /*burasi normalde 300px di*/
     border-radius: 10px;
 }
 
@@ -251,6 +268,9 @@ figcaption a:hover{
     color: white;
     border-radius: 10px;
     padding-top: 3%;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
     
 }
 
@@ -281,11 +301,18 @@ figcaption a:hover{
 
 .contact li{ 
     display: inline-block;   
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     list-style: none;
     margin: 10px;
 
+}
+
+.contact ul li:hover{    
+    border-radius: 10px;
+    border: 0.1px gray solid;
+    background-color: #135a9d;
+    transform: scale(1.1)
 }
 
 footer{
@@ -293,9 +320,12 @@ footer{
     background-color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-weight: 100;
-    font-size:0.8rem;
-    padding: 1rem 0;
-    
+    font-size 1rem;
+    padding: 1rem 0;    
+}
+
+footer p {
+    font-size: 1rem;
 }
 
 
@@ -312,23 +342,26 @@ footer{
   
     header .navigation .menu-list li a{
       font-size: 1rem;
-    }
-    .landing{
-        margin-bottom: 50px;
-        
+      margin-right: 10px;
     }
 
-    h3 {
+    .landing{
+        display: flex;
+        align-items:;
+        margin: 70px auto;
+        height: 400px;        
+    }
+
+    p {
         width: 100%;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         padding: 1%;
         text-align: center;
                 
     }   
 
     figure .preview{    
-        /* min-width: 20rem; */
-        width: 25rem;    /*burasi normalde 300px di*/
+        width:100%;    
         border-radius: 10px;
     } 
 }
@@ -338,16 +371,18 @@ footer{
 /* Large Mobile :480px. */
 
 @media only screen and (max-width: 767px) {
+    *{
+        text-align: center;
+    }
 
     header .navigation .menu-list {
       position: absolute;
-      top: 15vh;
+      top: 12vh;
       min-width: 100%;
       background: #135a9d;
       text-align: center;
       display: none;
-      color: white;
-      
+      color: white;      
     }
   
     header .navigation .menu-list li {
@@ -371,31 +406,44 @@ footer{
     header .navigation .hamburger{
       display: block;
     }
+
+    .landing{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items:center;
+        margin: 40px auto;
+        height: 400px;        
+    }
+
+   
   
     h1 {
-      font-size: 2.4rem;
+      font-size: 3.4rem;
       text-align: center;
     }
   
     h2 {
-      font-size: 1.4rem;
+      font-size: 2.4rem;
       text-align: center;
     }
     
     h3 {
         width: 100%;
-        font-size: 1.1rem;
+        font-size: 1.8rem;
         padding: 1%;
-        text-align: center;
-                
+        text-align: center;                
     }
-    .intro h3{
-        width: 120%;        
-        margin: 4%;
+
+
+    p{
+        width: 100%;        
+        margin: 3%;
+        padding: 10px;
     }
 
     figure .preview{    
-        width: 28rem;    /*burasi normalde 300px di*/
+        width: 100%;    /*burasi normalde 300px di*/
         border-radius: 10px;
     }    
   
