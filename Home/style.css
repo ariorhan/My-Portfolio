@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Teko:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+*{  margin: 0;
+    padding: 0;    
+    box-sizing: border-box;     
+    scroll-behavior: smooth !important;
+         
+}
+
+body{
+    
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    width: 100%; 
+}
+
+header {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+    z-index: 10;    
+    border-bottom: 0.5px solid #1669ad;
+    width: 100%;
+    max-width: 1200px;
+}
+  
+.logo {     
+    margin-left: 10px;   
+}
+
+
+header .navigation .menu-list {    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;    
+    text-align: center;
+    overflow: hidden; 
+    list-style: none;  
+    font-size: 1.3rem;         
+}
+
+
+header .navigation .menu-list li a {
+    color:black ;
+    margin-right: 20px;
+    letter-spacing: 1px;    
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;     
+}
+
+header .navigation .menu-list li :hover{
+    color:#135a9d;
+    font-weight: 600;
+    transform: all 800ms ease-in;
+}
+
+header .navigation .hamburger {
+    margin-right: 20px;
+    display: none;
+}
+   
+header .navigation .hamburger .bar{
+    width: 30px;
+    height: 2px;
+    margin: 7px;
+    background: #b1d4e0;
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(/images/bg-last.jpg);
+    height:80vh;
+    background-repeat:no-repeat;
+    background-size:1200px 600px;
+    background-position:center;
+    background-position-y: 1%;
+    
+}
+
+.coding img{
+    width: 15rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1{
+    color: #135a9d;
+    font-size: 4rem;
+    font-weight: 600;    
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1%;
+}
+
+h3{
+    padding: 0 0.2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+h3 .uline {
+    text-decoration: underline;
+    text-decoration-color: #135a9d;
+    
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #135a9d;   
+    margin: auto; 
+    max-width: 1200px;
+    padding: 1%;
+    opacity:0.8;
+    border-radius: 10px;
+    /* height: 400px; */
+    
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+    width: 100%;
+    line-height: 2.5rem;
+    
+}
+
+
+.work{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+.work-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    margin: 3% 10%;
+    
+}
+
+figure {
+    position: relative;
+    color: white;
+    transition: all 0.45s ease; 
+    margin-bottom: 3%;
+         
+}
+
+figure .preview{    
+    width: 22rem;    /*burasi normalde 300px di*/
+    border-radius: 10px;
+    height: 15rem;
+    
+    
+}
+
+figcaption{ 
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;        
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* display: none;              */
+    opacity: 0;    
+    transition-delay: 0.1s; 
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;    
+}
+figcaption h3 {
+    line-height: 1.2rem;
+}
+
+figcaption a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px white solid ;
+    color:white;    
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10% 5%;
+    text-decoration: none;
+       
+}
+
+.project:before,
+.project:after {
+    background-color: #07345f;
+    color: white;
+    border-radius: 15px;    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    transition: all 1s ease;    
+    z-index: 1;
+    opacity: 0;
+    
+    /* transform: scaleX(0.7);     */
+}
+
+.project:hover:before,
+.project:hover:after {
+    transform: scale(1);
+    opacity: 1;
+}
+  
+.project:hover > img {
+    opacity: 0.5;
+}
+  
+.project:hover figcaption {
+    opacity: 1;
+}
+
+figcaption a:hover{
+    background: white;
+    color: #135a9d;
+    font-weight: 500;
+}
+   
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(136, 136, 136);
+    color: white;
+    border-radius: 10px;
+    padding-top: 3%;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto; 
+    position: relative;      
+}
+
+.contact .mail{
+    text-align: center;
+    border: 3px rgba(30, 30, 34, 0.982) solid ;
+    background-color:white;
+    color: #135a9d;
+    border-radius: 10px;
+    padding: 0.5% 1%;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    width: 130px;
+    height: 45px;
+}
+
+.contact .mail:hover{
+      background-color: #135a9d;
+      color: whitesmoke;
+}
+
+.contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+.contact li{ 
+    display: inline-block;   
+    width: 25px;
+    height: 25px;
+    list-style: none;
+    margin: 10px;
+
+}
+
+.contact ul li:hover{    
+    border-radius: 10px;
+    border: 0.1px gray solid;
+    background-color: #135a9d;
+    transform: scale(1.1)
+}
+
+.scroll-to-top a{  
+    position: absolute;
+    right: 0;
+    bottom: 0;    
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 1rem 0;    
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+/* Tablet desktop :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 1132px) {
+   
+    header .navigation .menu-list {
+        width: auto;
+      }
+    
+    h1{
+        text-align: center;
+    }
+  
+    header .navigation .menu-list li a{
+      font-size: 1.3rem;
+    }
+
+    .landing{
+        display: flex;
+        margin: 70px auto;
+        height: 400px;        
+    }
+
+    p {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 1%;
+        text-align: center;
+                
+    }   
+
+    figure .preview{    
+        width:100%;    
+        border-radius: 10px;
+        height: auto;
+    } 
+
+    
+}
+
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+    
+
+    header .navigation .menu-list {
+      position: absolute;
+      top: 21vh;
+      min-width: 100%;
+      background: #135a9d;
+      text-align: center;
+      display: none;
+      color: white;
+
+      min-height: 100vh; 
+      opacity: 0.9;
+      font-size: 3rem;
+      
+      
+    }
+  
+    header .navigation .menu-list li {
+      display: block;
+    }
+  
+    header .navigation .menu-list li a {
+      display: block;
+      padding: 1rem;
+      transition: color 1s ease, padding 1s ease, background-color 1s ease;
+      color: lightgray;
+      margin: 0;
+  
+    }
+  
+    header .navigation .menu-list li a:hover{
+      color: white;      
+      background: #07345f;
+    }  
+  
+    header .navigation .hamburger{
+      display: block;
+    }
+
+    .landing{
+        display: flex;
+        /* flex-direction: column;
+        justify-content: center; */
+        flex-wrap: wrap;
+        align-items:center;
+        margin: 40px auto;
+        height: 400px;        
+        
+    }
+
+   
+  
+    h1 {
+      font-size: 3.4rem;
+      text-align: center;
+    }
+  
+    h2 {
+      font-size: 2.4rem;
+      text-align: center;
+      
+    }
+    
+    h3 {
+        width: 100%;
+        font-size: 1.8rem;
+        padding: 1%;
+        text-align: center;  
+                      
+    }
+
+
+    p{
+        width: 100%;        
+        margin: 3%;
+        padding: 10px;
+    }
+
+    figure .preview{    
+        width: 100%;    /*burasi normalde 300px di*/
+        border-radius: 10px;
+    }    
+  
+}
